@@ -2,10 +2,10 @@
   "builders": [
     {
       "type": "vmware-iso",
-      "iso_url": "http://download.microsoft.com/download/7/5/E/75EC4E54-5B02-42D6-8879-D8D3A25FBEF7/7601.17514.101119-1850_x64fre_server_eval_en-us-GRMSXEVAL_EN_DVD.iso",
-      "iso_checksum_type": "md5",
-      "iso_checksum": "4263be2cf3c59177c45085c0a7bc6ca5",
-      "headless": true,
+      "iso_url": "/Users/nan/iso/en_windows_server_2008_r2_with_sp1_vl_build_x64_dvd_617403.iso",
+      "iso_checksum": "7e7e9425041b3328ccf723a0855c2bc4f462ec57",
+      "iso_checksum_type": "sha1",
+      "headless": false,
       "boot_wait": "2m",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
@@ -32,10 +32,10 @@
     },
     {
       "type": "virtualbox-iso",
-      "iso_url": "http://download.microsoft.com/download/7/5/E/75EC4E54-5B02-42D6-8879-D8D3A25FBEF7/7601.17514.101119-1850_x64fre_server_eval_en-us-GRMSXEVAL_EN_DVD.iso",
-      "iso_checksum_type": "md5",
-      "iso_checksum": "4263be2cf3c59177c45085c0a7bc6ca5",
-      "headless": true,
+      "iso_url": "/Users/nan/iso/en_windows_server_2008_r2_with_sp1_vl_build_x64_dvd_617403.iso",
+      "iso_checksum": "7e7e9425041b3328ccf723a0855c2bc4f462ec57",
+      "iso_checksum_type": "sha1",
+      "headless": false,
       "boot_wait": "2m",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
@@ -73,7 +73,8 @@
       "execute_command": "{{.Vars}} cmd /c C:/Windows/Temp/script.bat",
       "scripts": [
         "./scripts/vm-guest-tools.bat",
-        "./scripts/chef.bat",
+        "./scripts/puppet-enterprise.bat",
+        "./scripts/chocolatey.bat",
         "./scripts/vagrant-ssh.bat",
         "./scripts/compact.bat"
       ]

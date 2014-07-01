@@ -226,6 +226,12 @@
                     <Order>21</Order>
                     <Description>Disable Hibernation Mode</Description>
                 </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c netsh firewall add portopening TCP 1433 "Port 1433" </CommandLine>
+                    <Description>MS SQL port open</Description>
+                    <Order>22</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
                 <!-- WITHOUT WINDOWS UPDATES -->
                 <!--
                 <SynchronousCommand wcm:action="add">

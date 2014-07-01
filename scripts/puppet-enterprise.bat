@@ -1,5 +1,5 @@
 if not exist "C:\Windows\Temp\puppet.msi" (
-  powershell -Command "(New-Object System.Net.WebClient).DownloadFile('http://pm.puppetlabs.com/puppet-enterprise/3.0.1/puppet-enterprise-3.0.1.msi', 'C:\Windows\Temp\puppet.msi')" <NUL
+  powershell -Command "(New-Object System.Net.WebClient).DownloadFile('http://pm.puppetlabs.com/puppet-enterprise/3.2.3/puppet-enterprise-3.2.3.msi', 'C:\Windows\Temp\puppet.msi')" <NUL
 )
 
 :: http://docs.puppetlabs.com/pe/latest/install_windows.html
